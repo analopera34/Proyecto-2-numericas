@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Club de fotografía</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    /* Estilo para el Navbar */
+    .navbar {
+        background-color: #886447; 
+        padding: 2rem;
+    }
+
+    /* Estilo para el logo del navbar */
+    .navbar-brand {
+        font-family: "Lexend Zetta", sans-serif;
+        font-weight: bold;
+        font-size: 30px;
+        color: #886447; 
+        align-items: center;
+    }
+
+    /* Cambiar color de texto del logo al pasar el mouse */
+    .navbar-brand:hover {
+        color: black; 
+        transition: color 0.3s;
+    }
+
+    /* Estilo de los links en el navbar */
+    .nav-link {
+      font-family: "Lexend Zetta", sans-serif;
+        color: #886447; 
+        font-size: 0.8rem;
+        font-weight: bold;
+        padding: 1rem 1.5rem;
+margin-left: 0px;
+    }
+
+    /* Cambiar color de los links al pasar el mouse */
+    .nav-link:hover {
+        color: #bc9065; /* Rojo claro al pasar el mouse */
+        background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+        border-radius: 5px;
+        transition: color 0.3s, background-color 0.3s;
+    }
+
+    /* Estilo del Dropdown en el navbar */
+    .navbar-nav .nav-item.dropdown .nav-link {
+        color: #886447; /* Color de texto en el dropdown */
+    }
+
+    /* Cambiar color de los elementos del Dropdown */
+    .navbar-nav .nav-item.dropdown:hover .nav-link {
+        color: #bc9065; /* Color al pasar el mouse */
+    }
+
+    /* Estilo del botón de búsqueda en el navbar */
+    .btn-outline-success {
+        color: #ecf0f1; /* Color de texto */
+        background-color: #886447; 
+        font-weight: bold;
+        align-items: self-end;
+        padding: 0.3rem;
+        margin-right: 0px;
+    }
+
+    /* Cambiar color del botón de búsqueda al pasar el mouse */
+    .btn-outline-success:hover {
+        background-color: #ecf0f1;
+        color: #bc9065; 
+        font-weight: bold;
+        border-color: #886447;
+    }
+
+    .navbar-toggler-icon {
+      background-color: #886447; 
+    }
+
+    .form-control {
+        border-radius: 30px;
+        padding-left: 20px;
+    }
+
+            /* Estilo para la sección hero */
+            .hero {
+            background-image: url('hero1.jpg'); 
+            background-size: cover;
+            background-position: right;
+            height: 70vh; 
+            display: flex;
+            align-items: top;
+            justify-content: top;
+            color: #340909
+        }
+
+        .hero .container {
+        font-family: "Lexend Zetta", sans-serif;
+        font-weight: bold;
+        font-size: 0.5rem;
+        text-align: top;
+        margin-top: 2%;
+        margin-left: 20%
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .hero .btn-primary {
+            background-color: #886447;
+            border: none;
+            font-weight: bold;
+            padding: 12px 25px;
+            font-size: 0.8rem;
+            border-radius: 10px;
+            text-transform: uppercase;
+        }
+
+        .hero .btn-primary:hover {
+            background-color: #bc9065;
+        }
+
+        footer {
+      background-color: #886447;
+      color: #ecf0f1;
+      padding: 20px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center; 
+    }
+
+    footer .social-icons a {
+      color: #ecf0f1;
+      font-size: 2rem;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    footer .social-icons a:hover {
+      color: #bc9065;
+    }
+
+    footer .rights {
+      text-align: center;
+      margin-top: 50%px;
+      font-size: 2rem;
+      align-items: center;
+    }
+
+
+    .text-center{
+    font-family: "Lexend Zetta", sans-serif;
+        font-weight: bold;
+        font-size: 50px;
+        color: #886447; 
+        align-items: center;
+      }
+
+    /* Estilo de las tarjetas */
+.card {
+    border: none;
+    box-shadow: 0 4px 8px #886447 (0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-body {
+  font-family: "Lexend Zetta", sans-serif;
+  font-size: 0.4rem;
+    padding: 1rem;
+    align-items: center;
+}
+
+.card-title {
+  color: #886447;
+  font-family: "Lexend Zetta", sans-serif;
+  font-weight: bold;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-text {
+    color: #886447;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.img-fluid {
+    width: 100%;         /* Asegura que la imagen ocupe el ancho completo */
+    height: 200px;       /* Ajusta la altura como prefieras */
+    object-fit: cover;   /* Corta la imagen para que ocupe toda el área sin distorsión */
+    border-radius: 5px 5px 0 0; /* Opcional: Redondea los bordes superiores de la imagen */
+}
+
+/* Modal */
+
+
+.modal-body {
+    padding: 0;
+    text-align: center;
+    align-items: center;
+    width: 100%;         /* Asegura que la imagen ocupe el ancho completo */
+
+}
+
+.modal-content {
+  color: #886447;
+  font-family: "Lexend Zetta", sans-serif;
+  font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    align-items: center;
+}
+
+.modal-dialog-centered {
+    max-width: 90%;
+    width: auto; 
+}
+
+.modal-content {
+    border: none; 
+    border-radius: 10px; 
+    overflow: hidden; 
+}
+
+.modal-body {
+    padding: 20px; 
+}
+
+/* Imagen responsiva en el modal */
+.modal-body img {
+    width: 80%;
+    height: auto; 
+    display: block;
+    object-fit: cover; 
+    max-height: 80vh; 
+}
+
+/* Espaciado entre columnas */
+.g-4 > div {
+    padding-bottom: 20px;
+}
+
+.btn-danger {
+    background-color: #886447; /* Color personalizado */
+    border: none;
+    color: #ecf0f1;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1rem;
+    display: inline-block; /* Asegura que el botón se centre */
+}
+
+.btn-danger:hover {
+    background-color: #c2bf98; /* Color diferente al hacer hover */
+    transform: translateY(-3px); /* Efecto de elevación */
+}
+
+/* Espaciado entre botones y el texto */
+.card-body .btn {
+    margin-top: 10px;
+}
+</style>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Fotoclub</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="formulario.html">Unirse al club</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="eventos.html">Eventos</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Descargas
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Animales</a></li>
+                <li><a class="dropdown-item" href="#">Paisajes</a></li>
+                <li><a class="dropdown-item" href="#">Retrato</a></li>
+                <li><a class="dropdown-item" href="#">Productos</a></li>
+                <li><a class="dropdown-item" href="#">Eventos</a></li>
+                <li><a class="dropdown-item" href="#">Otras</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sobre nosotros</a>
+            </li>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Escribe una paralabra" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Búsqueda</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+
+  
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+          <h1>Bienvenido</h1>
+          <p>Captura momentos especiales y únete a nuestra comunidad de fotógrafos.</p>
+          <a href="formulario.html" class="btn btn-primary">Mas información</a>
+      </div>
+  </section>
+
+  </main>
+
+
+    <section class="portafolio py-5">
+      <div class="container">
+          <h2 class="text-center mb-4">Nuestras categorias de descargas</h2>
+          <div class="row">
+            <div class="col-md-4">
+              <img src="animales.jpg" alt="animales" class="img-fluid" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-img="animales.jpg">
+              <div class="card-body">
+                <h5 class="card-title">Animales</h5>
+                <p class="card-text">Encuentra acá imagenes de animales.</p>
+                <a href="#" class="btn btn-danger">Ir a descargas</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <img src="paisajes.jpg" alt="Paisajes" class="img-fluid" data-bs-toggle="modal" data-bs-target="#exampleModal1" data-bs-img="paisajes.jpg">
+            <div class="card-body">
+              <h5 class="card-title">Paisajes</h5>
+              <p class="card-text">Encuentra acá imagenes de animales.</p>
+              <a href="#" class="btn btn-danger">Ir a descargas</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <img src="personas.jpg" alt="personas" class="img-fluid" data-bs-toggle="modal" data-bs-target="#exampleModal2" data-bs-img="personas.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Personas</h5>
+            <p class="card-text">Encuentra acá imagenes de personas.</p>
+            <a href="#" class="btn btn-danger">Ir a descargas</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <img src="producto.jpg" alt="producto" class="img-fluid" data-bs-toggle="modal" data-bs-target="#exampleModal3" data-bs-img="producto.jpg">
+        <div class="card-body">
+          <h5 class="card-title">Producto</h5>
+          <p class="card-text">Encuentra acá imagenes de productos.</p>
+          <a href="#" class="btn btn-danger">Ir a descargas</a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <img src="eventos.jpg" alt="eventos" class="img-fluid" data-bs-toggle="modal" data-bs-target="#exampleModal4" data-bs-img="eventos.jpg">
+      <div class="card-body">
+        <h5 class="card-title">Eventos</h5>
+        <p class="card-text">Encuentra acá imagenes de eventos.</p>
+        <a href="#" class="btn btn-danger">Ir a descargas</a>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <img src="nocturna.jpg" alt="nocturna" class="img-fluid" data-bs-toggle="modal" data-bs-target="#exampleModal5" data-bs-img="nocturna.jpg">
+    <div class="card-body">
+      <h5 class="card-title">Otras</h5>
+      <p class="card-text">Encuentra acá imagenes de otras categorías.</p>
+      <a href="#" class="btn btn-danger">Ir a descargas</a>
+  </div>
+</div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Animales</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <img id="modal-img" src="animales.jpg" alt="Imagen en Modal" class="img-fluid w-100">
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Paisajes</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img id="modal-img" src="paisajes.jpg" alt="Imagen en Modal" class="img-fluid w-100">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Personas</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <img id="modal-img" src="personas.jpg" alt="Imagen en Modal" class="img-fluid w-100">
+          </div>
+      </div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Producto</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <img id="modal-img" src="producto.jpg" alt="Imagen en Modal" class="img-fluid w-100">
+          </div>
+      </div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Eventos</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <img id="modal-img" src="eventos.jpg" alt="Imagen en Modal" class="img-fluid w-100">
+          </div>
+      </div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Otras</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <img id="modal-img" src="nocturna.jpg" alt="Imagen en Modal" class="img-fluid w-100">
+          </div>
+      </div>
+  </div>
+</div>
+
+  <footer>
+    <p>&copy; 2024 Fotoclub. Todos los derechos reservados.</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
